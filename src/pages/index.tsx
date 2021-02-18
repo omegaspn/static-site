@@ -6,10 +6,14 @@ import {
 	Button,
 	Typography,
 	IconButton,
+	CardActionArea,
+	Card,
+	CardContent,
 } from "@material-ui/core";
 import { TABS } from "../constants";
 import MenuIcon from "@material-ui/icons/Menu";
 import GlobalStyle from "../styles/GlobalStyle";
+import { StyledCardMedia } from "./styled";
 
 export default function RootPage(props: PageProps) {
 	return (
@@ -27,6 +31,15 @@ export default function RootPage(props: PageProps) {
 					))}
 				</Toolbar>
 			</AppBar>
+			<Card>
+				<CardActionArea>
+					<StyledCardMedia
+						image="https://us-fbcloud.net/wb/data/912/912560-img.rg6cxm.5p.jpg"
+						title="Contemplative Reptile"
+					/>
+					<CardContent>a;sldkfja;sldkfj</CardContent>
+				</CardActionArea>
+			</Card>
 			<Button variant="contained" color="secondary">
 				TEST BUTTON
 			</Button>
