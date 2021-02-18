@@ -1,19 +1,17 @@
-import React from "react";
 import { Link, PageProps } from "gatsby";
+import React from "react";
 import {
 	AppBar,
 	Toolbar,
 	Button,
 	Typography,
 	IconButton,
-	CardActionArea,
-	Card,
-	CardContent,
 } from "@material-ui/core";
-import { TABS } from "../constants";
 import MenuIcon from "@material-ui/icons/Menu";
+import { TABS } from "../constants";
 import GlobalStyle from "../styles/GlobalStyle";
-import { StyledCardMedia } from "./styled";
+import Card from "../components/Card";
+import { CardContainer } from "./styled";
 
 export default function RootPage(props: PageProps) {
 	return (
@@ -25,21 +23,18 @@ export default function RootPage(props: PageProps) {
 						<MenuIcon />
 					</IconButton>
 					{TABS.map((tab, index) => (
-						<Link to={tab.url}>
-							<Typography key={index}>{tab.name}</Typography>
+						<Link to={tab.url} key={index}>
+							<Typography>{tab.name}</Typography>
 						</Link>
 					))}
 				</Toolbar>
 			</AppBar>
-			<Card>
-				<CardActionArea>
-					<StyledCardMedia
-						image="https://us-fbcloud.net/wb/data/912/912560-img.rg6cxm.5p.jpg"
-						title="Contemplative Reptile"
-					/>
-					<CardContent>a;sldkfja;sldkfj</CardContent>
-				</CardActionArea>
-			</Card>
+
+			<CardContainer>
+				<Card title="cardTitle" date="" desc="cardDesc" />
+				<Card title="cardTitle" date="" desc="cardDesc" />
+				<Card title="cardTitle" date="" desc="cardDesc" />
+			</CardContainer>
 			<Button variant="contained" color="secondary">
 				TEST BUTTON
 			</Button>

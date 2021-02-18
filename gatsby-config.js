@@ -15,6 +15,14 @@ module.exports = {
 				},
 			},
 		},
-		`gatsby-plugin-styled-components`,
+		"gatsby-plugin-styled-components",
+		{
+			resolve: "gatsby-plugin-eslint",
+			options: {
+				stages: ["develop"],
+				extensions: ["js", "jsx"],
+				exclude: ["node_modules", ".cache", "public"],
+			},
+		},
 	],
 };

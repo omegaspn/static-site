@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { gray } from "../styles";
 import { createMuiTheme } from "@material-ui/core";
+import { gray } from "../styles";
 
 const theme = createMuiTheme({
 	typography: {
@@ -24,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: ${gray[300]};
     font-family: ${theme.typography.fontFamily}
+  }
+
+  .font-bold {
+    font-weight: 700;
   }
 `;
 
