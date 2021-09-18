@@ -14,6 +14,7 @@ import GlobalStyle from "../styles/GlobalStyle";
 export default function RootPage(props: PageProps) {
 	return (
 		<div>
+			ssss
 			<GlobalStyle />
 			<AppBar position="static">
 				<Toolbar>
